@@ -1,3 +1,4 @@
+import 'package:fav_app_with_provider_flutter/provider/auth_provider.dart';
 import 'package:fav_app_with_provider_flutter/provider/favourite_provider.dart';
 import 'package:fav_app_with_provider_flutter/provider/theme_changer_provider.dart';
 import 'package:fav_app_with_provider_flutter/screen/HomeScreen.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
-        ChangeNotifierProvider(create: (_) => ThemeChanger())
+        ChangeNotifierProvider(create: (_) => ThemeChanger()),
+        ChangeNotifierProvider(create: (_) => AuthProvider())
       ],
       child: Builder(builder: (BuildContext context){
 
